@@ -16,7 +16,7 @@ public class App {
         int idade = 120;
         double peso = 80.6;
         System.out.println("Idade é " + idade + ", Peso é: " + peso);
-
+        
 
         //Vídeo 3________________________________________________________________________________
         /* Conversão de tipo - Cast

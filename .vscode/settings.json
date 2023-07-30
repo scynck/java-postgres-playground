@@ -1,5 +1,5 @@
 {
-    "java.jdt.ls.java.home": "~/.sdkman/candidates/java/current",
+    "java.jdt.ls.java.home": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.8.7-hotspot",
     "java.inlayHints.parameterNames.enabled": "none",
     "maven.terminal.useJavaHome": true,
     "java.completion.favoriteStaticMembers": [
