@@ -35,7 +35,13 @@ public class AppClasses {
         System.out.println();
         cliente1.setRenda(2000);
         System.out.println(cliente1.getRenda());
-        cliente2.setSexo('P');
+        cliente2.setSexo('M');
+        System.out.println(cliente1.isEspecial());
+        System.out.println(cliente2.isEspecial());
+
+        Cliente cliente3 = new Cliente();
+        Cliente cliente4 = new Cliente(3000, 'M');
+        
         
     }
 }

@@ -11,6 +11,47 @@ public class Cliente{
     private double renda;
     private char sexo;
     private int anoNascimento;
+    private boolean especial;
+
+    /*Métodos construtores definem a forma que uma classe é instanciada em um objeto, podendo receber parâmetros que serão informados
+     * na ocasião de criação de cada objeto ou alguma lógica que carregue um comportamento sempre que um objeto dessa classe é criado
+     * Ao não ser criado, um método construtor é definido automaticamente em Java
+     * Para criá-lo, utiliza-se a sintaxe alteradorDeAcesso NomeClasse(). Obrigatoriamente seu nome é o nome da Classe
+     */
+
+    public Cliente(){
+        System.out.println("Objeto criado pelo construtor sem parâmetro");
+        if(Math.random()>0.5){
+            especial = true;
+        }
+    }
+
+
+    /*Estretanto, pode-se utilizar o princípio do overload para declarar um outro construtor, mas que, desta vez, aceita parâmetros
+     * isto é, ele é chamado quando a classe for instanciada fornecendo a quantidade de parâmetros com que ele é definido
+     * No exemplo abaixo, definimos um construtor com dois parâmetros: renda e sexo
+     * Pode-se inclusive chamar os respectivos setters
+     */
+    public Cliente(double renda, char sexo){
+        this(); //Esta linha serve para chamar o construtor que definimos antes, sem parâmetros, para utilizar suas funcionalidades. Entretanto, sempre que isso ocorrer,
+        // ele tem q ser chamado na primeira linha
+        // Cria-se o objeto com os atributos utilizando os métodos Setters para garantir as mesmas restrições
+        System.out.println("Objeto criado pelo construtor com parâmetros");
+        setRenda(renda);
+        setSexo(sexo);
+    }
+
+
+    public void setEspecial(boolean especial){
+        this.especial = especial;
+    }
+
+    public boolean isEspecial(){
+        return especial;
+    }
+    
+
+
 
     /*Uma vez criados os setters e getters, deve-se tornar os atributos privados para que os mesmos sejam alterados ou 
      * fiquem visíveis apenas pelos métodos setters e getters. Para isto, utiliza-se a palavra private em suas declarações
