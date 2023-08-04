@@ -98,7 +98,5 @@ public class AppClasses {
         System.out.println(nome3.charAt(1));
         System.out.println(nome3.toLowerCase());
 
-
-
     }
 }
