@@ -12,6 +12,10 @@ public class Cliente{
     private char sexo;
     private int anoNascimento;
     private boolean especial;
+    private String nome;
+    private String cpf;
+    private String cidade;
+
 
     /*Métodos construtores definem a forma que uma classe é instanciada em um objeto, podendo receber parâmetros que serão informados
      * na ocasião de criação de cada objeto ou alguma lógica que carregue um comportamento sempre que um objeto dessa classe é criado
@@ -25,7 +29,6 @@ public class Cliente{
             especial = true;
         }
     }
-
 
     /*Estretanto, pode-se utilizar o princípio do overload para declarar um outro construtor, mas que, desta vez, aceita parâmetros
      * isto é, ele é chamado quando a classe for instanciada fornecendo a quantidade de parâmetros com que ele é definido
@@ -41,6 +44,60 @@ public class Cliente{
         setSexo(sexo);
     }
 
+        
+    /*Dentre os métodos mais comuns em boas práticas de Java, encontram-se os Setters e os Getters
+     * Setters são utilizados para se alterar o valor de algum parâmetro de um objeto
+     * Getters são utilizados para se obter o valor atual de algum parâmetro de um objeto
+     */
+
+     /*Setters por convenção possuem um único atributo e, por boa prática, sua nomenclatura é setNomeAtributo
+      * Sua utilização é vantajosa pois permite-se filtrar valores possívels para os atributos de um objeto
+      * Como um método Setter não retorna nenhum valor, na sua declaração utiliza-se a palavra void
+      * Mas como ele tem um parâmetro por convenção, o parâmetro é declarado com o mesmo tipo do atributo
+      */
+
+    /*Uma vez criados os setters e getters, deve-se tornar os atributos privados para que os mesmos sejam alterados ou 
+     * fiquem visíveis apenas pelos métodos setters e getters. Para isto, utiliza-se a palavra private em suas declarações
+     * Além disso, para se criar setters e getters dos atributos, basta clicar neles com o botão direito, selecionar 
+     * Source Action e então criar os setters e getters, inpondo as respectivas restrições de valor
+     */
+
+    
+    public void setNome(String nome){
+        // Strings são classes em Java e portanto possuem métodos que são bastante úteis, como por exemplo:
+        // Método trim - Remove espaços no começo e no final de uma string, retornando apenas a parte que tem caracteres
+        // Método equals - Utilizado para comparar Strings ao invés de utilizar o operador ==
+        // Método toUpperCase e toLowerCase - Que transformam todos os chars de uma string em caixa alta ou baixa
+        // Métodos isBlank e isEmpty que retornam um boolean indicando se a String é um objeto vazio ou que possui apenas espaços ou se ele é apenas vazio, respectivamente
+        // Método split() que quebra a String em um vetor de Strings a partir de um determinado identificador
+        // Método charAt() que retorna qual o caracter em uma dada posição na String
+
+        if(nome.isBlank()){
+            System.out.println("Nome inválido!");
+        } else{
+            this.nome = nome.trim().toUpperCase();  
+        }
+        
+    }
+    public String getNome(){
+        return nome;
+    }
+
+    public void setCpf(String cpf){
+        this.cpf = cpf;
+    }
+
+    public String getCpf(){
+        return cpf;
+    }
+
+    public void setCidade(String cidade){
+        this.cidade = cidade;
+    }
+
+    public String getCidade(){
+        return cidade;
+    }
 
     public void setEspecial(boolean especial){
         this.especial = especial;
@@ -49,15 +106,7 @@ public class Cliente{
     public boolean isEspecial(){
         return especial;
     }
-    
 
-
-
-    /*Uma vez criados os setters e getters, deve-se tornar os atributos privados para que os mesmos sejam alterados ou 
-     * fiquem visíveis apenas pelos métodos setters e getters. Para isto, utiliza-se a palavra private em suas declarações
-     * Além disso, para se criar setters e getters dos atributos, basta clicar neles com o botão direito, selecionar 
-     * Source Action e então criar os setters e getters, inpondo as respectivas restrições de valor
-     */
     public char getSexo() {
         return sexo;
     }
@@ -72,17 +121,7 @@ public class Cliente{
     public void setAnoNascimento(int anoNascimento) {
         this.anoNascimento = anoNascimento;
     }
-    
-    /*Dentre os métodos mais comuns em boas práticas de Java, encontram-se os Setters e os Getters
-     * Setters são utilizados para se alterar o valor de algum parâmetro de um objeto
-     * Getters são utilizados para se obter o valor atual de algum parâmetro de um objeto
-     */
 
-     /*Setters por convenção possuem um único atributo e, por boa prática, sua nomenclatura é setNomeAtributo
-      * Sua utilização é vantajosa pois permite-se filtrar valores possívels para os atributos de um objeto
-      * Como um método Setter não retorna nenhum valor, na sua declaração utiliza-se a palavra void
-      * Mas como ele tem um parâmetro por convenção, o parâmetro é declarado com o mesmo tipo do atributo
-      */
     public void setRenda(double renda){
         // Por boa prática, utiliza-se o parâmetro com o mesmo nome do atributo. Entretanto, para diferenciá-los
         //no escopo de uma função, utiliza-se o this para se referir ao atributo
