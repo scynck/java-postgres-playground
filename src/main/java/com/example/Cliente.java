@@ -75,7 +75,7 @@ public class Cliente{
         if(nome.isBlank()){
             System.out.println("Nome inválido!");
         } else{
-            this.nome = nome.trim().toUpperCase();  
+            this.nome = nome.trim();  
         }
         
     }
@@ -135,6 +135,11 @@ public class Cliente{
     */
     public double getRenda(){
         return this.renda;
+    }
+
+    public String toString(){
+        return "Cliente: " + nome + ", Cidade: " + cidade;
+
     }
 
 
