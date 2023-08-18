@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.example.model.Cidadao;
+import com.example.model.Cliente;
+
 public class AppListas {
     /*Definição de vetores - Eles podem ser definidos sobre qualquer tipo, primitivo ou composto, inclusive classes criadas */
     public static void main(String[] ags){

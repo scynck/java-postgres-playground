@@ -2,6 +2,8 @@ package com.example;
 
 import java.time.LocalDate;
 
+import com.example.model.Cidadao;
+
 public class AppEleitor {
 
     public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.model.Cliente;
+
 public class AppClasses {
     
     // O método main dentro da Classe de mesmo nome do arquivo serve para indicar que esta classe será executada

@@ -1,4 +1,4 @@
-package com.example;
+package com.example.model;
 
 /*Esta classe foi movida do arquivo original clicando nela com o botão direito, Refactor e Move
  * Após este processo, ele deve receber a atribuição de public para ficar acessível para todas as pastas que estejam no projeto

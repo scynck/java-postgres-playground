@@ -2,6 +2,8 @@ package com.example;
 
 import java.util.Scanner;
 
+import com.example.model.Cliente;
+
 public class AppScanner {
     
     // O método main dentro da Classe de mesmo nome do arquivo serve para indicar que esta classe será executada
