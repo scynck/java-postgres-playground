@@ -2,7 +2,10 @@ package com.example.dao;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 
+import com.example.model.Marca;
 import com.example.model.Produto;
 
 public class ProdutoDAO extends DAO{
@@ -66,5 +69,28 @@ public class ProdutoDAO extends DAO{
         }      
 
     }
+
+    public List<Produto> listar() throws SQLException{
+        var sql = "select * from estado";
+        var produtoList = new LinkedList<Produto>();
+
+        var statement = conn.createStatement();
+        var valor = statement.executeQuery(sql);
+
+        while(valor.next()){
+            var produto = new Produto();
+            var marca = new Marca();
+            produto.setId(valor.getLong("id"));
+            produto.setNome(valor.getString("nome"));
+            marca.setId(valor.getLong("marca_id"));
+            produto.setMarca(marca);
+            produto.setValor(valor.getDouble("valor"));
+            produtoList.add(produto);
+        }
+        return produtoList;
+
+
+
+    } 
     
 }

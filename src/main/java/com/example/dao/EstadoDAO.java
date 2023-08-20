@@ -28,9 +28,8 @@ public class EstadoDAO extends DAO{
             estado.setUf(result.getString("uf"));
             estado.setArea(result.getInt("area_km2"));
             estado.setPopulacao(result.getInt("populacao"));
-
             /*Ideia de exercício: Fazer um método em alguma classe adequada para retornar o nome da região a partir da ID para salvar no objeto estado */
-            regiao.setId(result.getLong("regiao_id"));    
+            regiao.setId(result.getLong("regiao_id"));
             estado.setRegiao(regiao);
             lista.add(estado);
         }
