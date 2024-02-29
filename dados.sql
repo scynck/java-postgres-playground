@@ -3,6 +3,14 @@
 -- Área por estado: https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_área
 -- População por estado (prévio censo 2022): https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_população
 
+drop table if exists gatos
+
+create table gatos{
+    id serial not null primary key,
+    nome VARCHAR(20) not null,
+    idade int not null,
+    cor VARCHAR(10) not null
+}
 
 drop table if EXISTS transacao
 
